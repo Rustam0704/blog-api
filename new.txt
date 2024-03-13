@@ -1,0 +1,34 @@
+1. DateTimeField(auto_now_add = True)
+2. DateTimeField(auto_now = True)
+
+updated = 2
+created = 1
+
+AbstractModel
+- first_name
+- last_name
+- email
+...
+
+
+
+class PostListView(ListView):
+    queryset = Post.objects.all()
+    template_name= 'post.html'
+
+
+post.html
+
+{% for post in object_list %}
+
+
+{% endfor %}
+
+
+
+class BlogTestCase(TestCase):
+    pass
+
+class HomePageTestCase(SimpleTestCase):
+    pass
+
